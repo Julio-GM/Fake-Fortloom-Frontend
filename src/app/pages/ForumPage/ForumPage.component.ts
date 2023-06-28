@@ -61,7 +61,7 @@ export class ForumPageComponent implements OnInit {
     this.idforum=id;
     this.getidforum(this.idforum)
     let pad=parseInt(this.route.snapshot.paramMap.get('id')!);
-    let id2= pad;
+    let id2= 1;
     this.iddepaso=+this.route.snapshot.params['id']
     this.getfanatic()
     this.getartists()
@@ -87,14 +87,13 @@ export class ForumPageComponent implements OnInit {
     this.service.getById(id).subscribe((response:any)=>{
 
      this.forum=response;
-     console.log("inicio");
+     console.log(this.forum);
       //console.log(this.forum);
       this.forumname=this.forum.forumname;
-      this.reportid=this.forum.person.id
       this.forumdescription=this.forum.forumdescription
       this.conductrules=this.forum.conductrules
-      //console.log(this.forum.user)
-      this.getidUser(this.forum.person.id)
+      console.log(this.forum.conductrules)
+      this.getidUser(1)
 
     });
 
@@ -143,14 +142,14 @@ export class ForumPageComponent implements OnInit {
   }
 
   createrules(){
-
-    this.service.update(this.idforum,this.ForumRules)
-    .subscribe((response:any)=>{
-
-
+    var a:any 
+    a = this.forum.conductrules
+    a.push(this.ForumRules.conductrules)
+    this.forum.conductrules = a
+    this.service.update(this.idforum, this.forum).subscribe((response: any) => {
+      alert("Regla agregada")
+      this.getidforum(1)
     })
-
-
 
   }
 

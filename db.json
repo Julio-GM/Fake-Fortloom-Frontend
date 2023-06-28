@@ -1,0 +1,165 @@
+{
+  "forum": [
+    {
+      "id": 1,
+      "forumdescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a rutrum ligula. Aliquam faucibus quam augue, auctor molestie nulla molestie at. ",
+      "forumname": "Foro prueba 001",
+      "conductrules": [
+        "1. regla 001",
+        "2. regla 001",
+        "3. regla 001",
+        "4. regla 002",
+        "hola",
+        "siiiiiiiiii"
+      ]
+    },
+    {
+      "forumname": "aaaaaaa",
+      "forumdescription": "xd",
+      "id": 2,
+      "conductrules": [
+        "xd"
+      ]
+    }
+  ],
+  "artists": [
+    {
+      "aboutMe": "I'm a passionate artist who loves creating amazing music.",
+      "artistfollowers": 1000,
+      "email": "john.doe@example.com",
+      "facebookLink": "https://www.facebook.com/johndoe",
+      "id": 1,
+      "instagramLink": "https://www.instagram.com/johndoe",
+      "lastname": "Doe",
+      "password": "password123",
+      "realname": "John Doe",
+      "twitterLink": "https://twitter.com/johndoe",
+      "username": "johndoe"
+    },
+    {
+      "aboutMe": "I'm an artist who believes in expressing emotions through music.",
+      "artistfollowers": 500,
+      "email": "jane.smith@example.com",
+      "facebookLink": "https://www.facebook.com/janesmith",
+      "id": 2,
+      "instagramLink": "https://www.instagram.com/janesmith",
+      "lastname": "Smith",
+      "password": "password456",
+      "realname": "Jane Smith",
+      "twitterLink": "https://twitter.com/janesmith",
+      "username": "janesmith"
+    },
+    {
+      "aboutMe": "I'm a talented artist who loves experimenting with different genres.",
+      "artistfollowers": 2000,
+      "email": "alex.brown@example.com",
+      "facebookLink": "https://www.facebook.com/alexbrown",
+      "id": 3,
+      "instagramLink": "https://www.instagram.com/alexbrown",
+      "lastname": "Brown",
+      "password": "password789",
+      "realname": "Alex Brown",
+      "twitterLink": "https://twitter.com/alexbrown",
+      "username": "alexbrown"
+    },
+    {
+      "aboutMe": "I'm a talented artist who loves experimenting with different genres.",
+      "artistfollowers": 1500,
+      "email": "mike.johnson@example.com",
+      "facebookLink": "https://www.facebook.com/mikejohnson",
+      "id": 4,
+      "instagramLink": "https://www.instagram.com/mikejohnson",
+      "lastname": "Johnson",
+      "password": "passwordabc",
+      "realname": "Mike Johnson",
+      "twitterLink": "https://twitter.com/mikejohnson",
+      "username": "mikejohnson"
+    }
+  ],
+  "content": [
+    {
+      "artist": {
+        "artistfollowers": 1000,
+        "email": "john.doe@example.com",
+        "facebookLink": "https://www.facebook.com/johndoe",
+        "id": 1,
+        "instagramLink": "https://www.instagram.com/johndoe",
+        "lastname": "Doe",
+        "password": "password123",
+        "realname": "John Doe",
+        "twitterLink": "https://twitter.com/johndoe",
+        "username": "johndoe"
+      },
+      "artistid": 1,
+      "description": "This is a sample description.",
+      "id": 1,
+      "name": "Sample Album 1",
+      "registerdate": "2023-06-27T05:03:42.575Z",
+      "releasedDate": "2023-06-27T05:03:42.575Z",
+      "ticketLink": "https://www.example.com/tickets"
+    },
+    {
+      "artist": {
+        "artistfollowers": 500,
+        "email": "jane.smith@example.com",
+        "facebookLink": "https://www.facebook.com/janesmith",
+        "id": 2,
+        "instagramLink": "https://www.instagram.com/janesmith",
+        "lastname": "Smith",
+        "password": "password456",
+        "realname": "Jane Smith",
+        "twitterLink": "https://twitter.com/janesmith",
+        "username": "janesmith"
+      },
+      "artistid": 2,
+      "description": "Another sample description.",
+      "id": 2,
+      "name": "Sample Album 2",
+      "registerdate": "2023-06-27T05:03:42.575Z",
+      "releasedDate": "2023-06-27T05:03:42.575Z",
+      "ticketLink": "https://www.example.com/tickets"
+    },
+    {
+      "artist": {
+        "artistfollowers": 2000,
+        "email": "alex.brown@example.com",
+        "facebookLink": "https://www.facebook.com/alexbrown",
+        "id": 3,
+        "instagramLink": "https://www.instagram.com/alexbrown",
+        "lastname": "Brown",
+        "password": "password789",
+        "realname": "Alex Brown",
+        "twitterLink": "https://twitter.com/alexbrown",
+        "username": "alexbrown"
+      },
+      "artistid": 3,
+      "description": "Yet another sample description.",
+      "id": 3,
+      "name": "Sample Album 3",
+      "registerdate": "2023-06-27T05:03:42.575Z",
+      "releasedDate": "2023-06-27T05:03:42.575Z",
+      "ticketLink": "https://www.example.com/tickets"
+    },
+    {
+      "artist": {
+        "artistfollowers": 1500,
+        "email": "mike.johnson@example.com",
+        "facebookLink": "https://www.facebook.com/mikejohnson",
+        "id": 4,
+        "instagramLink": "https://www.instagram.com/mikejohnson",
+        "lastname": "Johnson",
+        "password": "passwordabc",
+        "realname": "Mike Johnson",
+        "twitterLink": "https://twitter.com/mikejohnson",
+        "username": "mikejohnson"
+      },
+      "artistid": 4,
+      "description": "One more sample description.",
+      "id": 4,
+      "name": "Sample Album 4",
+      "registerdate": "2023-06-27T05:03:42.575Z",
+      "releasedDate": "2023-06-27T05:03:42.575Z",
+      "ticketLink": "https://www.example.com/tickets"
+    }
+  ]
+}
