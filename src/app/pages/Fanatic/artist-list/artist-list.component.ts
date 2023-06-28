@@ -32,7 +32,9 @@ export class ArtistListComponent implements OnInit {
 
   getArtists(){
     this.artistService.getAll().subscribe((response: any) => {
-      this.artistList = response.content;
+      this.artistList = response;
+      console.log(response);
+      
       console.log("Artistas")
       console.log(this.artistList)
     });
