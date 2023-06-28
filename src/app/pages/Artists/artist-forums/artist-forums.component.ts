@@ -45,14 +45,22 @@ ngOnInit(): void {
   let pod=parseInt(this.route.snapshot.paramMap.get('id')!);
   let id= pod;
   this.idnumber=id;
-
+  this.getAllForums()
   this.getAllStudents()
   console.log(this.forums);
   console.log(this.displayedColumns);
   console.log(this.isEditMode)
   this.getbyid(1)
 }
-
+getAllForums(){
+  console.log("awda");
+  
+  this.service.getAll().subscribe((response:any) => {
+    this.forumdata = response
+    console.log(this.forumdata);
+    
+  })
+}
 
 getAllStudents() {
   this.service.getAll().subscribe((response: any) => {

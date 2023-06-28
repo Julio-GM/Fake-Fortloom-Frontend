@@ -10,8 +10,8 @@ import { ForumRules } from 'src/app/models/ForumRules';
 })
 export class ForumService {
 
-  basePath = 'https://experiment-isw-backend-jenkins.herokuapp.com/api/v1/forums';
-  basePath2= "https://experiment-isw-backend-jenkins.herokuapp.com/api/v1/user";
+  basePath = 'http://localhost:8083/api/v1/forums';
+  basePath2= "http://localhost:3000/Usuario"
   basePath3='https://experiment-isw-backend-jenkins.herokuapp.com/api/v1'
   httpOptions = {
     headers: new HttpHeaders({
@@ -36,7 +36,7 @@ export class ForumService {
   
   // Create Forum
   create(item: any,id:number): Observable<Forum> {
-    return this.http.post<Forum>(`${this.basePath2}/${id}/forums`, JSON.stringify(item), this.httpOptions)
+    return this.http.post<Forum>(`http://localhost:3000/forum/`, JSON.stringify(item), this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError));
@@ -44,7 +44,7 @@ export class ForumService {
   
   // Get Forum by id
   getById(id: any): Observable<Forum> {
-    return this.http.get<Forum>(`${this.basePath}/${id}`, this.httpOptions)
+    return this.http.get<Forum>(`http://localhost:3000/forum/${id}`, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError));
@@ -52,7 +52,7 @@ export class ForumService {
   
   // Get All Forums
   getAll(): Observable<Forum> {
-    return this.http.get<Forum>(this.basePath, this.httpOptions)
+    return this.http.get<Forum>("http://localhost:3000/forum", this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError));
@@ -60,7 +60,7 @@ export class ForumService {
   
   // Update Forum
   update(id: any, item: any): Observable<ForumRules> {
-    return this.http.put<ForumRules>(`${this.basePath3}/conductrules/${id}`, JSON.stringify(item), this.httpOptions)
+    return this.http.put<ForumRules>(`http://localhost:3000/forum/${id}`, JSON.stringify(item), this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError));
