@@ -280,6 +280,101 @@
         "twitterLink": "https://twitter.com/johndoe",
         "username": "johndoe"
       }
+    },
+    {
+      "publicationName": "64362357407112752",
+      "publicationDescription": "a",
+      "likes": 0,
+      "date": "29/06/2023",
+      "artist": {
+        "artistfollowers": 1000,
+        "email": "john.doe@example.com",
+        "facebookLink": "https://www.facebook.com/johndoe",
+        "id": 1,
+        "instagramLink": "https://www.instagram.com/johndoe",
+        "lastname": "Doe",
+        "password": "password123",
+        "realname": "John Doe",
+        "twitterLink": "https://twitter.com/johndoe",
+        "username": "johndoe"
+      },
+      "id": 2
+    },
+    {
+      "publicationName": "02311667164272634",
+      "publicationDescription": "a",
+      "likes": 0,
+      "date": "29/06/2023",
+      "artist": {
+        "artistfollowers": 1000,
+        "email": "john.doe@example.com",
+        "facebookLink": "https://www.facebook.com/johndoe",
+        "id": 1,
+        "instagramLink": "https://www.instagram.com/johndoe",
+        "lastname": "Doe",
+        "password": "password123",
+        "realname": "John Doe",
+        "twitterLink": "https://twitter.com/johndoe",
+        "username": "johndoe"
+      },
+      "id": 3
+    },
+    {
+      "publicationName": "471604420473036514",
+      "publicationDescription": "a",
+      "likes": 0,
+      "date": "29/06/2023",
+      "artist": {
+        "artistfollowers": 1000,
+        "email": "john.doe@example.com",
+        "facebookLink": "https://www.facebook.com/johndoe",
+        "id": 1,
+        "instagramLink": "https://www.instagram.com/johndoe",
+        "lastname": "Doe",
+        "password": "password123",
+        "realname": "John Doe",
+        "twitterLink": "https://twitter.com/johndoe",
+        "username": "johndoe"
+      },
+      "id": 4
+    },
+    {
+      "publicationName": "14361072163142534",
+      "publicationDescription": "a",
+      "likes": 0,
+      "date": "29/06/2023",
+      "artist": {
+        "artistfollowers": 1000,
+        "email": "john.doe@example.com",
+        "facebookLink": "https://www.facebook.com/johndoe",
+        "id": 1,
+        "instagramLink": "https://www.instagram.com/johndoe",
+        "lastname": "Doe",
+        "password": "password123",
+        "realname": "John Doe",
+        "twitterLink": "https://twitter.com/johndoe",
+        "username": "johndoe"
+      },
+      "id": 5
+    },
+    {
+      "publicationName": "040657012532011314",
+      "publicationDescription": "a",
+      "likes": 0,
+      "date": "29/06/2023",
+      "artist": {
+        "artistfollowers": 1000,
+        "email": "john.doe@example.com",
+        "facebookLink": "https://www.facebook.com/johndoe",
+        "id": 1,
+        "instagramLink": "https://www.instagram.com/johndoe",
+        "lastname": "Doe",
+        "password": "password123",
+        "realname": "John Doe",
+        "twitterLink": "https://twitter.com/johndoe",
+        "username": "johndoe"
+      },
+      "id": 6
     }
   ],
   "fanatics": [
@@ -341,6 +436,54 @@
           "username": "johndoe"
         }
       }
+    },
+    {
+      "content": "https://mmo.aiircdn.com/766/645991517c281.jpg",
+      "publicationId": 5,
+      "publication": {
+        "publicationName": "14361072163142534",
+        "publicationDescription": "a",
+        "likes": 0,
+        "date": "29/06/2023",
+        "artist": {
+          "artistfollowers": 1000,
+          "email": "john.doe@example.com",
+          "facebookLink": "https://www.facebook.com/johndoe",
+          "id": 1,
+          "instagramLink": "https://www.instagram.com/johndoe",
+          "lastname": "Doe",
+          "password": "password123",
+          "realname": "John Doe",
+          "twitterLink": "https://twitter.com/johndoe",
+          "username": "johndoe"
+        },
+        "id": 5
+      },
+      "id": 3
+    },
+    {
+      "content": "https://mmo.aiircdn.com/766/645991517c281.jpg",
+      "publicationId": 6,
+      "publication": {
+        "publicationName": "040657012532011314",
+        "publicationDescription": "a",
+        "likes": 0,
+        "date": "29/06/2023",
+        "artist": {
+          "artistfollowers": 1000,
+          "email": "john.doe@example.com",
+          "facebookLink": "https://www.facebook.com/johndoe",
+          "id": 1,
+          "instagramLink": "https://www.instagram.com/johndoe",
+          "lastname": "Doe",
+          "password": "password123",
+          "realname": "John Doe",
+          "twitterLink": "https://twitter.com/johndoe",
+          "username": "johndoe"
+        },
+        "id": 6
+      },
+      "id": 4
     }
   ]
 }

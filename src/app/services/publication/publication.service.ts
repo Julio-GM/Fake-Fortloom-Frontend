@@ -5,6 +5,7 @@ import {Observable, throwError} from "rxjs";
 import {catchError, retry} from "rxjs/operators";
 import { Publication } from 'src/app/models/publication';
 import {MatPaginator} from "@angular/material/paginator";
+import {Multimedia} from "../../models/multimedia";
 @Injectable({
   providedIn: 'root'
 })
@@ -39,7 +40,15 @@ export class PublicationService {
 
   // Create Publicacion
   create(item: Publication,id:number): Observable<Publication> {
-    return this.http.post<Publication>(`${this.basepath2}/${id}/publications`, JSON.stringify(item), this.httpOptions)
+    console.log("creating")
+    return this.http.post<Publication>(`${this.basePath}`, JSON.stringify(item), this.httpOptions)
+      .pipe(
+        retry(2),
+        catchError(this.handleError));
+  }
+
+  createImage(multimedia: Multimedia): Observable<Multimedia> {
+    return this.http.post<Multimedia>("http://localhost:3000/multimedias", JSON.stringify(multimedia), this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError));

@@ -13,7 +13,7 @@ export interface Artist {
 
       password:string;
 
-      content:any;
+      //content:any;
 
       artistfollowers:number;
 

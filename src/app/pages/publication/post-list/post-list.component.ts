@@ -8,10 +8,11 @@ import {MatPaginator} from "@angular/material/paginator";
   styleUrls: ['./post-list.component.css']
 })
 export class PostListComponent implements OnInit {
-
+  isHidden=true
   studentData!: any;
   dataSource: MatTableDataSource<any>;
   haveInfo = false;
+  secondButtonText = "Create Post"
 
   @ViewChild(MatPaginator, {static: true})
   paginator!: MatPaginator;
@@ -23,6 +24,11 @@ export class PostListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  activateCreatePostScreen(): void{
+    this.isHidden = !this.isHidden;
+    this.secondButtonText = this.secondButtonText == "Create Post" ? "Cancel creating post" : "Create Post"
   }
 
   getPosts(): void {

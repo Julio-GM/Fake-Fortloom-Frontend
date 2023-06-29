@@ -1,10 +1,16 @@
 <style>
-  .center {
-    text-align: center;
+  .center_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .center-item{
+    margin: 10px;
   }
 </style>
-<div class="center">
-  <button mat-raised-button color="primary" (click)="getPosts()" id="seeposts">See Posts</button>
+<div class="center_buttons">
+  <div class="center-item"><button mat-raised-button color="primary" (click)="getPosts()" id="seeposts">See Posts</button></div>
+  <div class="center-item"><button mat-raised-button color="primary" (click)="activateCreatePostScreen()" id="createposts">{{secondButtonText}}</button></div>
 </div>
 <div *ngIf="haveInfo">
   <div *ngFor="let a of studentData">
@@ -12,4 +18,7 @@
     <app-post [fullPost]="a"></app-post>
     <app-comment-form [postId]="a.id"></app-comment-form>
   </div>
+</div>
+<div *ngIf="!isHidden">
+  <app-post-form></app-post-form>
 </div>

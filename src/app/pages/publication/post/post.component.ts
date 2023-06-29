@@ -81,9 +81,6 @@ descripcion!:string
     })
 
 
-
-
-
     this.usuarioservice.getById(this.fullPost.artist.id)
       .subscribe((response: any) => {
         this.relatedUser = response;

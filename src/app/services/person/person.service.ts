@@ -8,16 +8,7 @@ import { Person } from 'src/app/models/Person';
   providedIn: 'root'
 })
 export class PersonService {
-
-<<<<<<< HEAD
-  
   basePath = 'http://localhost:3000/user';
-  
-=======
-  basePath = 'http://localhost:3000/users';
-  basePath2 = 'http://localhost:3000/Usuario';
-
->>>>>>> f564961ee8acd2d07d813790e71427210192fb96
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
