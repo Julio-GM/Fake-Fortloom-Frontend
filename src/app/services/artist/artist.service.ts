@@ -10,13 +10,14 @@ import { Artist } from 'src/app/models/artist';
 export class ArtistService {
 
 
-  basePath = 'http://localhost:8081/api/v1/artists';
+  basePath = 'http://localhost:3000/artists';
 
   httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-    })
-  }
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+    'Cache-Control': 'no-cache' 
+  })
+}
 
 
 constructor(private http: HttpClient) { }
@@ -52,6 +53,8 @@ getByname(id: string): Observable<Artist> {
       catchError(this.handleError));
 }
 getAll(): Observable<Artist> {
+  console.log('service');
+  console.log(this.http.get<Artist>("http://localhost:3000/artists", this.httpOptions));
   return this.http.get<Artist>("http://localhost:3000/artists", this.httpOptions)
     .pipe(
       retry(2),

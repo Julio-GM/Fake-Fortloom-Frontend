@@ -9,11 +9,7 @@
 <div *ngIf="haveInfo">
   <div *ngFor="let a of studentData">
     <br/>
-
-    <app-post
-      [fullPost]="a"
-    >
-    </app-post>
+    <app-post [fullPost]="a"></app-post>
     <app-comment-form [postId]="a.id"></app-comment-form>
   </div>
 </div>

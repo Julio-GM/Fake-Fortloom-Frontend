@@ -1,5 +1,4 @@
 {
-
   "artists": [
     {
       "aboutMe": "I'm a passionate artist who loves creating amazing music.",
@@ -55,8 +54,7 @@
     }
   ],
 
-
-"content": [
+  "content": [
     {
       "artist": {
         "artistfollowers": 1000,
@@ -140,6 +138,29 @@
       "registerdate": "2023-06-27T05:03:42.575Z",
       "releasedDate": "2023-06-27T05:03:42.575Z",
       "ticketLink": "https://www.example.com/tickets"
+    }
+  ],
+
+  "publications": [
+    {
+      "id": 1,
+      "image": true,
+      "description": "Descripcion de publicacion 1",
+      "registerDate": "27/06/2023",
+      "artistId": "1",
+      "contentId": "1"
+    }
+  ],
+
+  "fanatics": [
+    {
+      "id": 1,
+      "username": "fanatico",
+      "realname": "Fanatico",
+      "lastname": "Fanaticos",
+      "email": "fanatic@gmail.com",
+      "password": "123",
+      "fanaticAlias": "Fanaticalias"
     }
   ]
 }

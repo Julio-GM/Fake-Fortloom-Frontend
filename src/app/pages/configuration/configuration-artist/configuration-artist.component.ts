@@ -50,14 +50,14 @@ export class ConfigurationArtistComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
     console.log(this.arraygenders);
     this.getAllArtists();
-    
+
     let pod=parseInt(this.route.snapshot.paramMap.get('id')!);
     let id= pod;
     this.idnumber=id;
-    
+
     this.getArtistByUserId();
-    
-    
+
+
   }
 
   AddGenders(){
@@ -76,11 +76,11 @@ export class ConfigurationArtistComponent implements OnInit {
       this.dataSource.data = response;
       this.dataSource.paginator=this.paginator;
 
-      
+
     });
   }
 
-  
+
 
   updateArtist() {
     console.log(this.artistdata.id)
@@ -130,7 +130,7 @@ updatetwitteraccount(){
       this.dataSource.data = response;
       this.dataSource.paginator=this.paginator;
 
-      
+
     });
   }
 
@@ -139,7 +139,7 @@ updatetwitteraccount(){
       this.dataSource.data = response;
       this.dataSource.paginator=this.paginator;
       this.userdata = response;
-      
+
     });
   }
 
@@ -158,7 +158,7 @@ updatetwitteraccount(){
           this.dataSource.data = response;
           this.dataSource.paginator=this.paginator;
           this.userdata = response;
-          
+
 
         });
     });
@@ -173,7 +173,7 @@ opensetvinculation(){
   }else{
     this.vinculos=false
   }
-  
+
 }
 
 facebutton(){
@@ -260,7 +260,7 @@ public onFileChanged(event:any) {
   const uploadImageData = new FormData();
     uploadImageData.append('file', this.selectedFile, this.selectedFile.name);
   console.log(this.selectedFile)
-  this.httpClient.put("http://localhost:8080/api/v1/users/"+this.userdata.id+"/updatephoto", uploadImageData, { observe: 'response' })
+  this.httpClient.put("http://localhost:3000/users/"+this.userdata.id+"/updatephoto", uploadImageData, { observe: 'response' })
   .subscribe((response) => {
     if (response.status === 200) {
       console.log('Image uploaded successfully');
@@ -282,7 +282,7 @@ retrievedImage: any;
 getImage(){
   console.log("artist")
   console.log(this.artistdata)
-  this.httpClient.get('http://localhost:8080/api/v1/users/image/' + this.artistdata.id)
+  this.httpClient.get('http://localhost:3000/users/image/' + this.artistdata.id)
   .subscribe(
     res => {
       this.retrieveResonse = res;

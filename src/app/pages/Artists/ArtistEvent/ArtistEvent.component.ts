@@ -63,12 +63,14 @@ export class ArtistEventComponent implements OnInit {
     let id = pod;
     this.idevent=id;
     console.log(this.idevent);
-    
+
   this.getByIdUser(1)
   }
 
   getAllEvents() {
     this.eventService.getAll().subscribe((response: any) => {
+      console.log("Response");
+      console.log(response);
       this.dataSource.data = response.content;
       this.dataSource.paginator=this.paginator;
       this.arrayevents = response.content;
@@ -78,24 +80,20 @@ export class ArtistEventComponent implements OnInit {
   }
 
 
-
-
-
-
   setfecha( event: MatDatepickerInputEvent<Date>){
     console.log(event.value)
     this.eventdata.registerdate=event.value!
   }
 
 
- 
+
 
   addEvent() {
     console.log(this.idevent);
     console.log(this.eventdata);
     this.eventdata.eventlikes=0
     this.eventService.create(this.idevent,this.eventdata).subscribe((response: any) => {
-     
+
       this.arrayevents.push( {...response});
       this.arrayevents = this.arrayevents.map((o: any) => { return o; });
     },err=>{
@@ -103,16 +101,16 @@ export class ArtistEventComponent implements OnInit {
     });
   }
 
-  
+
 
   cancelEdit() {
     this.isEditMode = false;
     this.EventForm.resetForm();
   }
 
-  
 
-  
+
+
 
   updateEvent() {
     this.eventService.update(this.eventdata.id, this.eventdata).subscribe((response: any) => {
@@ -248,24 +246,24 @@ getByIdUser(id:number) {
 
 
     this.proDate=fecha
-    
+
     this.proDatevalue = this.datePipe.transform(fecha, 'yyyy-MM-dd')!;
-    
-    
+
+
     return this.proDatevalue
-    
+
     }
 
 
     checkislickisinevent(link:string){
 
-       
+
       if(link=="" || link==null){
-        
+
         return false
       }
       return true
-      
+
 
 }
 

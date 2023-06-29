@@ -13,9 +13,9 @@ export class EventService {
 
 
 
-basePath = 'https://experiment-isw-backend-jenkins.herokuapp.com/api/v1/event';
-BasePath=  'https://experiment-isw-backend-jenkins.herokuapp.com/api/v1/events';
-basepathcreate='https://experiment-isw-backend-jenkins.herokuapp.com/api/v1/artist';
+basePath = 'http://localhost:3000/event';
+BasePath=  'http://localhost:3000/events';
+basepathcreate='http://localhost:3000/artist';
 httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
@@ -56,6 +56,7 @@ getById(id: any): Observable<Event> {
 
 // Get All Events
 getAll(): Observable<Event> {
+  console.log("GETEVENTS")
   return this.http.get<Event>("http://localhost:3000/content", this.httpOptions)
     .pipe(
       retry(2),

@@ -5,6 +5,6 @@ export interface Publication {
       publicationName:string;
       publicationDescription:string;
       likes:number;
-      date:Date;
+      date:string;
       artist:Artist
 }
