@@ -10,16 +10,115 @@
         "3. regla 001",
         "4. regla 002",
         "hola",
-        "siiiiiiiiii"
+        "siiiiiiiiii",
+        "si",
+        "regla de prueba, holaaa",
+        "hola",
+        "regla de prueba 123",
+        "nueva regla videoooo a"
+      ],
+      "comments": [
+        {
+          "id": 1,
+          "commentdescription": "Comentario prueba",
+          "registerdate": "2023-06-28T23:57:25.730Z",
+          "userid": 1
+        },
+        {
+          "commentdescription": "xd",
+          "registerdate": "2023-06-28",
+          "userid": 1
+        },
+        {
+          "commentdescription": "aaaaa",
+          "registerdate": "2023-06-28",
+          "userid": 1
+        },
+        {
+          "commentdescription": "comentario de prueba holaaa",
+          "registerdate": "2023-06-28",
+          "userid": 1
+        },
+        {
+          "commentdescription": "comentario,si como estas",
+          "registerdate": "2023-06-28",
+          "userid": 1
+        },
+        {
+          "commentdescription": "awdaw",
+          "registerdate": "2023-06-28",
+          "userid": 1
+        },
+        {
+          "commentdescription": "si hola como estas¿¿¿",
+          "registerdate": "2023-06-28",
+          "userid": 1
+        }
       ]
     },
     {
-      "forumname": "aaaaaaa",
-      "forumdescription": "xd",
+      "forumname": "Foro 100",
+      "forumdescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a rutrum ligula. Aliquam faucibus quam augue, auctor molestie nulla molestie at. ",
       "id": 2,
       "conductrules": [
-        "xd"
+        "awdawdas"
+      ],
+      "comments": []
+    },
+    {
+      "forumname": "Foroooo",
+      "forumdescription": "foro de prueba aaa",
+      "id": 3
+    },
+    {
+      "forumname": "creando foro",
+      "forumdescription": "is",
+      "id": 4
+    },
+    {
+      "forumname": "foro 007",
+      "forumdescription": "is",
+      "id": 42
+    },
+    {
+      "forumname": "foro test",
+      "forumdescription": "su",
+      "id": 5,
+      "conductrules": [],
+      "comments": []
+    },
+    {
+      "forumname": "foro video",
+      "forumdescription": "foro de prueba para video",
+      "id": 6,
+      "conductrules": [
+        "regla 01",
+        "regla 02"
+      ],
+      "comments": [
+        {
+          "commentdescription": "hola",
+          "registerdate": "2023-06-28",
+          "userid": 1
+        },
+        {
+          "commentdescription": "aasdawdzsxcawwdfhj",
+          "registerdate": "2023-06-28",
+          "userid": 1
+        }
       ]
+    },
+    {
+      "forumname": "foro video",
+      "forumdescription": "foro de prueba para video",
+      "id": 43
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "username": "Antonio",
+      "userlastname": "Fer"
     }
   ],
   "artists": [

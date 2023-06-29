@@ -9,8 +9,8 @@ import { Person } from 'src/app/models/Person';
 })
 export class PersonService {
 
-  basePath = 'https://experiment-isw-backend-jenkins.herokuapp.com/api/v1/users';
-  basePath2 = 'http://localhost:3000/Usuario';
+  
+  basePath = 'http://localhost:3000/user';
   
   httpOptions = {
     headers: new HttpHeaders({

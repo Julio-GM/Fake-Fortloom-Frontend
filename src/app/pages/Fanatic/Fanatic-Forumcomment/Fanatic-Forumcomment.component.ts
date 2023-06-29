@@ -40,11 +40,12 @@ export class FanaticForumcommentComponent implements OnInit {
   paso:string="vacio";
   myDate !: Date;
   proDate = new Date();
+  public idforum!: number
   proDatevalue!:string;
   userid!:number
   forumid!:number
   latest_date!:string
-  constructor(private service:ForumcommentService,private serviceext:ForumService,private datePipe: DatePipe,
+  constructor(private service:ForumService,private serviceext:ForumService,private datePipe: DatePipe,
     private reportService:ReportService,private route:ActivatedRoute, public dialog:MatDialog) {
      this.commentdata={} as Forumcomment;
      this.commentdatabyid={} as Forumcomment;
@@ -57,20 +58,23 @@ export class FanaticForumcommentComponent implements OnInit {
 
   ngOnInit(): void {
 
-
+    let pod = parseInt(this.route.snapshot.paramMap.get('forumid')!);
+    let id = pod;
+    this.idforum = id;
     console.log(this.comentarios)
     //this.getAllcommentsperaforum() cambiar despues de la tb3
     //console.log(this.paso)
-    //this.getAllComments()//cambiar despues de exponer
-    this.getAllcommentsperaforum()
+    this.getAllComments(this.idforum)//cambiar despues de exponer
+    //this.getAllcommentthis.isperaforum()
 
   }
 
-  getAllComments(){
-    this.service.getAll().subscribe((response: any) => {
-      this.dataSource.data = response.content;
-      this.dataSource.sort=this.sort;
-      this.dataSource.paginator=this.paginator;
+  getAllComments(id: number){
+    console.log("hola")
+    this.service.getById(id).subscribe((response: any) => {
+      console.log(response.comments)
+      this.dataSource.data = response.comments;
+
       console.log("datos");
       console.log(this.dataSource.data)
 
@@ -78,15 +82,7 @@ export class FanaticForumcommentComponent implements OnInit {
 
 
   }
-  getAllcommentsperaforum(){
-    console.log(this.comentarios)
-    this.service.getallcommentsperforum(this.comentarios).subscribe((response: any) => {
-      this.dataSource.data = response.content;
-      console.log(this.dataSource.data)
-    });
 
-
-  }
 
 getname(){
 
@@ -150,17 +146,17 @@ this.fecha=sr;
 
 
 
-addcomment(userid:number,forumid:number){
+// addcomment(userid:number,forumid:number){
 
-  console.log("user")
-  console.log(userid)
-  this.service.create(this.commentdata,userid,forumid).subscribe((response: any) => {
-    this.dataSource.data.push( {...response});
-    this.dataSource.data = this.dataSource.data.map((o: any) => { return o; });
-  });
+//   console.log("user")
+//   console.log(userid)
+//   this.service.create(this.commentdata,userid,forumid).subscribe((response: any) => {
+//     this.dataSource.data.push( {...response});
+//     this.dataSource.data = this.dataSource.data.map((o: any) => { return o; });
+//   });
 
 
-}
+// }
 
 
 
@@ -201,30 +197,30 @@ getUserId(id :number){
 
 
 
-onSubmit(){
-this.myDate=new Date();
-this.latest_date =this.datePipe.transform(this.myDate, 'yyyy-MM-dd')!;
-//this.commentdata.registerdate=this.myDate
-  if (this.commentdataForm.form.valid) {
-    console.log(this.commentdata );
-    if (this.isEditMode) {
-      console.log("se actualiza")
-      this.updatecomment();
-    } else {
-      this.userid=1
-      this.addcomment(this.userid,this.forumid);
-    }
-    }
-    else{
-      console.log('Invalid data');
-    }
+// onSubmit(){
+// this.myDate=new Date();
+// this.latest_date =this.datePipe.transform(this.myDate, 'yyyy-MM-dd')!;
+// //this.commentdata.registerdate=this.myDate
+//   if (this.commentdataForm.form.valid) {
+//     console.log(this.commentdata );
+//     if (this.isEditMode) {
+//       console.log("se actualiza")
+//       this.updatecomment();
+//     } else {
+//       this.userid=1
+//       this.addcomment(this.userid,this.forumid);
+//     }
+//     }
+//     else{
+//       console.log('Invalid data');
+//     }
 
 
 
 
 
 
-}
+// }
 
 openDialog(id:number){
     console.log(id);

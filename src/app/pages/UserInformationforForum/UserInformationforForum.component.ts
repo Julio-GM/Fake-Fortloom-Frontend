@@ -28,10 +28,10 @@ export class UserInformationforForumComponent implements OnInit {
 getidUser(id:number){
   console.log("scan");
     this.service.getById(id).subscribe((response:any)=>{
-
+      
       this.user=response;
-       console.log(this.user);
-       this.username=this.user.realname
+      console.log(this.user);
+       this.username=this.user.username
        this.userlastname=this.user.lastname;
 
     });

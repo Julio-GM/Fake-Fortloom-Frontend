@@ -7,7 +7,7 @@ export interface Forum {
       forumdescription:string;
       conductrules:string
       person:Person;
-
+      comments: string
 
 
 }
