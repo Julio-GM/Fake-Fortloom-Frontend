@@ -1,34 +1,36 @@
-.imagehome{
+.body {
+  background-color: black;
+}
 
-    height:490px;
-    cursor: pointer;
-    }
-  .pp{
-  
+.imagehome{
+  background-color: black;
+  background-image: url(https://www.news10.com/wp-content/uploads/sites/64/2022/04/crowd-g6eae66f32_1920.jpg);
+  background-size: cover;
+}
+
+.pp{
   font-size: 35px;
   text-align: center;
-  }
-  .form{
-  
-  
+  color: #F2DF4B;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.form{
   height:60%;
   width:65%;
-  
-  }
-  .but{
-    
-    font-size: 25px;
-    color:black;
-  
-  }
-  .oo{
+}
+
+.but{
+  font-weight: normal;
+  font-size: 20px;
+  color:#eee;
+}
+
+.oo{
   height: 200%;
-  
-  }
-  .link{
-  
-    font-size: 15px;
-    word-spacing:10px;
-  
-    line-height: 100px;
-  }
+}
+
+.link{
+  font-size: 15px;
+  line-height: 45px;
+}

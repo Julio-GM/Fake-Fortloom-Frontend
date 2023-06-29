@@ -1,45 +1,35 @@
-<mat-grid-list cols="2" rows="5" rowHeight="700px">
-
+<mat-grid-list cols="2" rows="5" rowHeight="100%" style="background-color: black;">
   <mat-grid-tile>
-  <form [formGroup]="loginform" class="form"  >
+  <form [formGroup]="loginform">
+    <h1 style="color: #F2DF4B; font-weight: bold; font-size: 45px;">Bienvenido a Fortloom</h1>
+    <mat-form-field floatLabel="always" style="width: 100%;">
+        <input formControlName="email" matInput type="text" class="form-control form-control-lg" required style="background-color: white; color: black;">
+        <mat-label><strong style="color: #F2DF4B;">Ingrese su correo</strong></mat-label>
+        <!-- <mat-error *ngIf="loginform.hasError('required','email')">Es requerido</mat-error> -->
+    </mat-form-field>
+    
+    <mat-form-field floatLabel="always" style="width: 100%;">
+        <input formControlName="password" matInput type="password" class="form-control form-control-lg" required style="background-color: white; color: black;">
+        <mat-label><strong style="color: #F2DF4B;">Ingrese su contraseña</strong></mat-label>
+        <!-- <mat-error *ngIf="loginform.hasError('required','password')">Es requerido</mat-error> -->
+    </mat-form-field>  
   
-    <div class="form-group">
-  
-      <input formControlName="email" matInput type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" requiered >
-      <mat-error *ngIf="loginform.controls['email'].dirty && loginform.hasError('required','email')">Es requerido</mat-error>
+    <div style="text-align: center;">
+      <button type="submit" mat-raised-button color="primary" id="enter" class="but" (click)="onSubmit()">Ingresar</button>
     </div>
-    <div class="form-group" >
-  
-      <input formControlName="password" matInput type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" required>
-      <mat-error *ngIf="loginform.controls['password'].dirty && loginform.hasError('required','password')">Es requerido</mat-error>
-  
-    </div>
-  
-  
-  
-    <button type="submit"  [disabled]="!loginform.valid" mat-raised-button color="primary" id="enter" class="but" (click)="onSubmit()">Ingresar</button>
-    <div class="form-group">
-  
-      <a routerLink="/registerfanatic"  style="color:#000000;" class="link">Register yourself as a fan</a>
+    <div class="form-group" style="text-align: center;">
+      <a routerLink="/registerfanatic"  style="color:#eee;" class="link">Regístrate como un fanático</a>
       <mat-divider></mat-divider>
-      <a routerLink="/registerartist" style="color:#000000;" class="link">Register yourself as an artist</a>
-      <mat-divider></mat-divider>
-      <a routerLink="/sendemail" style="color:#000000;" class="link">You Forgot your Password</a>
-  
-  
+      <a routerLink="/registerartist" style="color:#eee;" class="link">Regístrate como un artista</a>
     </div>
      
   
   </form>
   
   </mat-grid-tile>
-  <mat-grid-tile>
-    <div>
-  <img src='https://cdn.discordapp.com/attachments/866839251563446272/898317609735450654/unknown.png'
-  class="imagehome">
-  
-  <h2 class="pp">“Connect with the artists you love, or with the fans you adore”</h2>
-  
-  </div>
-  </mat-grid-tile>
-  </mat-grid-list>
+    <mat-grid-tile class="imagehome">
+        <div style="margin-top: 150px;">
+            <h2 class="pp">“Connect with the artists you love, or with the fans you adore”</h2>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
