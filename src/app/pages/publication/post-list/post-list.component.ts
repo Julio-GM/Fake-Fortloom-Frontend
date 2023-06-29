@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import { PublicationService } from 'src/app/services/publication/publication.service';
+import {MatPaginator} from "@angular/material/paginator";
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
@@ -8,9 +9,12 @@ import { PublicationService } from 'src/app/services/publication/publication.ser
 })
 export class PostListComponent implements OnInit {
 
-  studentData: any;
+  studentData!: any;
   dataSource: MatTableDataSource<any>;
   haveInfo = false;
+
+  @ViewChild(MatPaginator, {static: true})
+  paginator!: MatPaginator;
 
   constructor(private postService: PublicationService) {
     this.studentData = {}
@@ -22,10 +26,15 @@ export class PostListComponent implements OnInit {
   }
 
   getPosts(): void {
+    console.log("See post button clicked")
     this.postService.getAll().subscribe((response: any) => {
-      this.dataSource.data = response.content;
-      this.studentData = this.dataSource.data;
+      console.log(response);
+      this.dataSource.data = response.data;
+      this.dataSource.paginator=this.paginator;
+      this.studentData = response;
       this.haveInfo = true;
+      console.log(this.dataSource.data);
+      console.log(this.studentData);
     });
   }
 

@@ -51,7 +51,7 @@
         </mat-form-field>
 
         <mat-form-field>
-          <input matInput placeholder="EventTicketLink" name="EventTicketLink" 
+          <input matInput placeholder="EventTicketLink" name="EventTicketLink"
             [(ngModel)]="eventdata.ticketLink" id="seteventticketlink">
             <mat-error>Es requerido</mat-error>
         </mat-form-field>
@@ -130,13 +130,13 @@
                 <td>
                   <p>{{getfechacomment(arr.registerdate)}}</p>
                 </td>
-                
+
               </tr>
             </table>
           </mat-card-actions>
           <mat-card-footer>
-            
-            
+
+
 
 
            <div *ngIf="checkislickisinevent(arr.ticketLink)">

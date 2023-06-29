@@ -9,7 +9,7 @@ import { Fanatic } from 'src/app/models/fanatic';
 })
 export class FanaticService {
 
-  basePath = 'http://localhost:8081/api/v1/fanatics';
+  basePath = 'http://localhost:3000/fanatics';
 
 
   httpOptions = {

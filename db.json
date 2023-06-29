@@ -161,5 +161,87 @@
       "releasedDate": "2023-06-27T05:03:42.575Z",
       "ticketLink": "https://www.example.com/tickets"
     }
+  ],
+  "publications": [
+    {
+      "id": 1,
+      "publicationName": "pUBLI",
+      "publicationDescription": "Descripcion de publicacion 1",
+      "likes": 20,
+      "date": "27/06/2023",
+      "artist": {
+        "artistfollowers": 1000,
+        "email": "john.doe@example.com",
+        "facebookLink": "https://www.facebook.com/johndoe",
+        "id": 1,
+        "instagramLink": "https://www.instagram.com/johndoe",
+        "lastname": "Doe",
+        "password": "password123",
+        "realname": "John Doe",
+        "twitterLink": "https://twitter.com/johndoe",
+        "username": "johndoe"
+      }
+    }
+  ],
+  "fanatics": [
+    {
+      "id": 1,
+      "username": "fanatico",
+      "realname": "Fanatico",
+      "lastname": "Fanaticos",
+      "email": "fanatic@gmail.com",
+      "password": "123",
+      "fanaticAlias": "Fanaticalias"
+    }
+  ],
+  "multimedias": [
+    {
+      "id": 1,
+      "content": "https://img.freepik.com/psd-premium/flyer-fiesta-electro-o-plantilla-banner-redes-sociales_256771-208.jpg?w=2000",
+      "publicationId": 1,
+      "publication": {
+        "id": 1,
+        "publicationName": "pUBLI",
+        "publicationDescription": "Descripcion de publicacion 1",
+        "likes": 20,
+        "date": "27/06/2023",
+        "artist": {
+          "artistfollowers": 1000,
+          "email": "john.doe@example.com",
+          "facebookLink": "https://www.facebook.com/johndoe",
+          "id": 1,
+          "instagramLink": "https://www.instagram.com/johndoe",
+          "lastname": "Doe",
+          "password": "password123",
+          "realname": "John Doe",
+          "twitterLink": "https://twitter.com/johndoe",
+          "username": "johndoe"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "content": "https://static.vecteezy.com/system/resources/previews/003/053/120/original/electro-music-festival-poster-for-party-vector.jpg",
+      "publicationId": 1,
+      "publication": {
+        "id": 1,
+        "publicationName": "pUBLI",
+        "publicationDescription": "Descripcion de publicacion 1",
+        "likes": 20,
+        "date": "27/06/2023",
+        "artist": {
+          "artistfollowers": 1000,
+          "email": "john.doe@example.com",
+          "facebookLink": "https://www.facebook.com/johndoe",
+          "id": 1,
+          "instagramLink": "https://www.instagram.com/johndoe",
+          "lastname": "Doe",
+          "password": "password123",
+          "realname": "John Doe",
+          "twitterLink": "https://twitter.com/johndoe",
+          "username": "johndoe"
+        }
+      }
+    }
   ]
 }

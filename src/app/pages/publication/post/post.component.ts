@@ -67,10 +67,11 @@ descripcion!:string
     this.lastname=this.fullPost.artist.lastname
     this.descripcion=this.fullPost.publicationDescription
     this.multimediaService.getallmultimediabypublication(this.fullPost.id).subscribe((response:any)=>{
-
-        console.log(response.length)
+        console.log("MULTIMEDIAS")
+        console.log(response)
          for (var char of response){
-          this.dbImage = 'data:image/jpeg;base64,' + char.image
+           console.log(char);
+           this.dbImage = char.content
            this.arrayimage.push( this.dbImage)
 
          }
@@ -99,7 +100,7 @@ descripcion!:string
   likePost(): void {
     this.fullPost.likes += 1;
     this.postService.update(this.fullPost.id, this.fullPost)
-       
+
       .subscribe((response: any) => {
         console.log(response);
         alert("liked")
@@ -128,7 +129,7 @@ descripcion!:string
 
 
   }
-  
+
   openDialog(){
     const dialogRef = this.dialog.open(DialogOverviewReportDialog, {
       width: '500px',
@@ -144,7 +145,7 @@ descripcion!:string
       }
     });
   }
-  
+
 
   flagPost(descriptiondialog:string): void {
     console.log(descriptiondialog);

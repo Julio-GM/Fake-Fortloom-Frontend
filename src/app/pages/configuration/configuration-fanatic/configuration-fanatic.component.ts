@@ -42,8 +42,8 @@ export class ConfigurationFanaticComponent implements OnInit {
   ngOnInit():void {
     this.dataSource.paginator = this.paginator;
     console.log(this.arraygenders);
-    
-    
+
+
 
     let pod=parseInt(this.route.snapshot.paramMap.get('id')!);
     let id= pod;
@@ -103,7 +103,7 @@ export class ConfigurationFanaticComponent implements OnInit {
     this.userService.updatepassword(this.userdata.id, this.userdata).subscribe((response: any) => {
       alert("password change")
       this.dataSource.data = this.dataSource.data.map((o: Person) => {
-        
+
         if (o.id === response.id) {
           o = response;
         }
@@ -164,7 +164,7 @@ export class ConfigurationFanaticComponent implements OnInit {
     const uploadImageData = new FormData();
       uploadImageData.append('file', this.selectedFile, this.selectedFile.name);
     console.log(this.selectedFile)
-    this.httpClient.put("http://localhost:8080/api/v1/users/"+this.userdata.id+"/updatephoto", uploadImageData, { observe: 'response' })
+    this.httpClient.put("http://localhost:3000/users/"+this.userdata.id+"/updatephoto", uploadImageData, { observe: 'response' })
     .subscribe((response) => {
       if (response.status === 200) {
         console.log('Image uploaded successfully');
@@ -174,11 +174,11 @@ export class ConfigurationFanaticComponent implements OnInit {
       }
     }
     );
-  
-  
-  
-  
-  
+
+
+
+
+
   }
   retrievedImage: any;
     base64Data: any;
@@ -186,7 +186,7 @@ export class ConfigurationFanaticComponent implements OnInit {
   getImage(){
     console.log("fanatic")
     console.log(this.fanaticdata)
-    this.httpClient.get('http://localhost:8080/api/v1/users/image/' + this.fanaticdata.id)
+    this.httpClient.get('http://localhost:3000/users/image/' + this.fanaticdata.id)
     .subscribe(
       res => {
         this.retrieveResonse = res;

@@ -17,9 +17,9 @@ import { Comment } from 'src/app/models/comment';
 })
 export class CommentService {
 
-  basePath ='https://experiment-isw-backend-jenkins.herokuapp.com/api/v1/comments'
-  basePath2 ='https://experiment-isw-backend-jenkins.herokuapp.com/api/v1/users'
-  basePath3 ='https://experiment-isw-backend-jenkins.herokuapp.com/api/v1/publications'
+  basePath ='http://localhost:3000/comments'
+  basePath2 ='http://localhost:3000/users'
+  basePath3 ='http://localhost:3000/publications'
 
 httpOptions = {
   headers: new HttpHeaders({
